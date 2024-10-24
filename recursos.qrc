@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>style.qss</file>
+        <file>background.png</file>
+        <file>canal.png</file>
+        <file>cuenca.png</file>
+        <file>logo.png</file>
+        <file>represa.png</file>
+        <file>style.qss</file>
+    </qresource>
+</RCC>

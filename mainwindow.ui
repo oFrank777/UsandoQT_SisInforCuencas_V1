@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <!-- Main window class definition -->
+    <class>MainWindow</class>
+    <widget class="QMainWindow" name="MainWindow">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>1000</width>
+                <height>700</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>1000</width>
+                <height>700</height>
+            </size>
+        </property>
+        <property name="windowTitle">
+            <string>Recursos Hídricos del Pacífico</string> <!-- Window title -->
+        </property>
+        <property name="styleSheet">
+            <string notr="true">
+                <!-- Define the styles for the main window and its elements -->
+                QMainWindow {
+                    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1,
+                                                      stop:0 #E0F7FA, stop:1 #B2EBF2);
+                }
+
+                QGroupBox {
+                    font-size: 14px;
+                    font-weight: bold;
+                    border: 2px solid #80DEEA; <!-- Border color -->
+                    border-radius: 15px; <!-- Rounded corners -->
+                    margin-top: 10px; <!-- Space above the group box -->
+                    background-color: rgba(255, 255, 255, 180); <!-- Semi-transparent background -->
+                }
+
+                QGroupBox::title {
+                    subcontrol-origin: margin;
+                    subcontrol-position: top center; <!-- Title position -->
+                    padding: 5px 10px; <!-- Title padding -->
+                    background-color: #00ACC1; <!-- Title background color -->
+                    color: white; <!-- Title text color -->
+                    border-radius: 5px; <!-- Rounded corners for the title -->
+                }
+
+                QPushButton {
+                    padding: 10px; <!-- Button padding -->
+                    border-radius: 8px; <!-- Rounded corners for buttons -->
+                    font-weight: bold; <!-- Bold text for buttons -->
+                    font-size: 12px; <!-- Font size for buttons -->
+                    color: white; <!-- Text color for buttons -->
+                    margin: 5px; <!-- Margin around buttons -->
+                }
+
+                QPushButton:hover {
+                    transform: scale(1.05); <!-- Scale effect on hover -->
+                    transition: transform 0.2s; <!-- Smooth transition for the scale effect -->
+                }
+
+                #cuencasFrame QPushButton {
+                    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0,
+                                                      stop:0 #2196F3, stop:1 #1976D2); <!-- Gradient for cuencas buttons -->
+                }
+
+                #represasFrame QPushButton {
+                    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0,
+                                                      stop:0 #F44336, stop:1 #D32F2F); <!-- Gradient for represas buttons -->
+                }
+
+                #canalesFrame QPushButton {
+                    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0,
+                                                      stop:0 #4CAF50, stop:1 #388E3C); <!-- Gradient for canales buttons -->
+                }
+
+                QLabel {
+                    font-size: 13px; <!-- Font size for labels -->
+                    color: #333333; <!-- Text color for labels -->
+                }
+
+                #infoFrame {
+                    background-color: rgba(255, 255, 255, 200); <!-- Semi-transparent background -->
+                    border-radius: 15px; <!-- Rounded corners -->
+                    border: 2px solid #80DEEA; <!-- Border color -->
+                    padding: 15px; <!-- Inner padding -->
+                    margin: 10px; <!-- Margin around the frame -->
+                }
+            </string>
+        </property>
+
+        <widget class="QWidget" name="centralwidget">
+            <layout class="QVBoxLayout" name="verticalLayout">
+                <item>
+                    <widget class="QFrame" name="headerFrame">
+                        <property name="minimumSize">
+                            <size>
+                                <width>0</width>
+                                <height>80</height> <!-- Minimum height for header -->
+                            </size>
+                        </property>
+                        <layout class="QHBoxLayout" name="horizontalLayout">
+                            <item>
+                                <widget class="QLabel" name="tituloLabel">
+                                    <property name="styleSheet">
+                                        <string notr="true">
+                                            font-size: 24px; <!-- Font size for the title -->
+                                            font-weight: bold; <!-- Bold text -->
+                                            color: #006064; <!-- Text color -->
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string>Sistema de Información de Recursos Hídricos del Pacífico</string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>Qt::AlignCenter</set> <!-- Center alignment for the label -->
+                                    </property>
+                                </widget>
+                            </item>
+                        </layout>
+                    </widget>
+                </item>
+                <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_2">
+                        <item>
+                            <widget class="QGroupBox" name="cuencasGroup">
+                                <property name="title">
+                                    <string>Cuencas Principales</string> <!-- Group title -->
+                                </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_2">
+                                    <item>
+                                        <widget class="QFrame" name="cuencasFrame">
+                                            <layout class="QVBoxLayout" name="cuencasLayout">
+                                                <item>
+                                                    <widget class="QPushButton" name="cuencaSanJuan">
+                                                        <property name="text">
+                                                            <string>Cuenca del Río San Juan</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QPushButton" name="cuencaPatia">
+                                                        <property name="text">
+                                                            <string>Cuenca del Río Patía</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QPushButton" name="cuencaMira">
+                                                        <property name="text">
+                                                            <string>Cuenca del Río Mira</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QPushButton" name="cuencaBaudo">
+                                                        <property name="text">
+                                                            <string>Cuenca del Río Baudó</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </widget>
+                                    </item>
+                                </layout>
+                            </widget>
+                        </item>
+                        <item>
+                            <widget class="QGroupBox" name="represasGroup">
+                                <property name="title">
+                                    <string>Represas y Embalses</string> <!-- Group title -->
+                                </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_3">
+                                    <item>
+                                        <widget class="QFrame" name="represasFrame">
+                                            <layout class="QVBoxLayout" name="represasLayout">
+                                                <item>
+                                                    <widget class="QPushButton" name="represaCalima">
+                                                        <property name="text">
+                                                            <string>Represa Calima</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QPushButton" name="represaSalvajina">
+                                                        <property name="text">
+                                                            <string>Represa Salvajina</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QPushButton" name="represaAnchicaya">
+                                                        <property name="text">
+                                                            <string>Represa Alto Anchicayá</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </widget>
+                                    </item>
+                                </layout>
+                            </widget>
+                        </item>
+                        <item>
+                            <widget class="QGroupBox" name="canalesGroup">
+                                <property name="title">
+                                    <string>Canales y Acueductos</string> <!-- Group title -->
+                                </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_4">
+                                    <item>
+                                        <widget class="QFrame" name="canalesFrame">
+                                            <layout class="QVBoxLayout" name="canalesLayout">
+                                                <item>
+                                                    <widget class="QPushButton" name="canalNaranjo">
+                                                        <property name="text">
+                                                            <string>Canal Naranjo</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QPushButton" name="canalDique">
+                                                        <property name="text">
+                                                            <string>Canal del Dique</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                                <item>
+                                                    <widget class="QPushButton" name="canalPichinde">
+                                                        <property name="text">
+                                                            <string>Canal Pichindé</string>
+                                                        </property>
+                                                    </widget>
+                                                </item>
+                                            </layout>
+                                        </widget>
+                                    </item>
+                                </layout>
+                            </widget>
+                        </item>
+                </layout>
+            </item>
+
+        <!-- Widget para mostrar información adicional al usuario -->
+        <item>
+            <widget class="QFrame" name="infoFrame"> <!-- Frame que contiene la información -->
+                <property name="minimumSize">
+                    <size>
+                        <width>0</width> <!-- Ancho mínimo del marco -->
+                        <height>200</height> <!-- Alto mínimo del marco -->
+                    </size>
+                </property>
+
+                <!-- Diseño vertical para los elementos dentro del marco de información -->
+                <layout class="QVBoxLayout" name="verticalLayout_5">
+                    <item>
+                        <widget class="QLabel" name="infoLabel"> <!-- Etiqueta para mostrar un mensaje -->
+                            <property name="text">
+                                <string>Seleccione un recurso hídrico para ver su información detallada</string> <!-- Texto instructivo -->
+                            </property>
+                            <property name="alignment">
+                                <set>Qt::AlignCenter</set> <!-- Alineación centrada del texto -->
+                            </property>
+                            <property name="wordWrap">
+                                <bool>true</bool> <!-- Habilitar ajuste de palabras para el texto -->
+                            </property>
+                        </widget>
+                    </item>
+                </layout>
+            </widget>
+        </item>
+
+    </layout>
+</widget>
+
+<!-- Barra de estado para mostrar mensajes de estado en la ventana principal -->
+<widget class="QStatusBar" name="statusbar"/>
+
+</widget>
+<resources/> <!-- Marcador de posición para archivos de recursos -->
+<connections/> <!-- Marcador de posición para conexiones de señales y slots -->
+</ui>

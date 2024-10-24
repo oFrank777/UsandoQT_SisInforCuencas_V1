@@ -1,0 +1,21 @@
+# Ignorar archivos de compilación
+*.o
+*.moc
+*.pro.user
+*.pro.user.*
+*.qmake.stash
+*.obj
+*.exe
+*.dll
+*.app
+*.dSYM
+*.o
+
+# Ignorar archivos temporales
+*.tmp
+*.log
+*.autosave
+
+# Ignorar el directorio de construcción
+build/
+ 
