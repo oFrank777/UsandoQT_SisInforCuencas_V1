@@ -2,7 +2,7 @@
 ---
 
 ## Interfaz de la Aplicación
-![Interfaz de la aplicación](Recursos hidricos del peru.png)
+![Interfaz de la aplicación](Recursoshidricosdelperu.png)
 
 ---
 ## Introducción
