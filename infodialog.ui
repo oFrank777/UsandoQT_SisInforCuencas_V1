@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InfoDialog</class>
+ <widget class="QDialog" name="InfoDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Información de Recurso Hídrico</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="labelTitulo">
+     <property name="styleSheet">
+      <string>
+       font-size: 24px;
+       font-weight: bold;
+       color: #2c3e50;
+       padding: 10px;
+       background-color: #ecf0f1;
+       border-radius: 10px;
+      </string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextBrowser" name="textInfo">
+     <property name="styleSheet">
+      <string>
+       QTextBrowser {
+           background-color: #ffffff;
+           border: 2px solid #bdc3c7;
+           border-radius: 10px;
+           padding: 15px;
+           font-size: 14px;
+           color: #34495e;
+       }
+       QScrollBar:vertical {
+           background: #f5f6fa;
+           width: 12px;
+           border-radius: 6px;
+       }
+       QScrollBar::handle:vertical {
+           background: #95a5a6;
+           border-radius: 6px;
+       }
+      </string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+</ui>
